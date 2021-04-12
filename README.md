@@ -30,10 +30,14 @@ Starcoin vs Ethereum JSON RPC comparison
 
 | Ethereum | Starcoin |
 | --- | --- |
-| `eth_chainId` | `chain.id` -> `result.id` |
+| `net_version` | `chain.id` -> `result.id` |
 
-## Get network version
+Note: `eth_chainId` in Ethereum also return the chain ID, but in hex. The `chain.id` method in Starcoin will also return the chain name of starcoin, for example, `barnard`, `proxima`, etc.
+
+## Send transaction
 
 | Ethereum | Starcoin |
 | --- | --- |
-| `net_version` | `chain.id` -> `result.name` |
+| `eth_call` | `txpool.submit_hex_transaction` 
+
+Note: hex transaction should be constructed from signer and transaction parameters, check this in [starcoin.js](https://github.com/starcoinorg/starcoin.js).
