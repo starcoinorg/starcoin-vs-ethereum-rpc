@@ -41,3 +41,18 @@ Note: `eth_chainId` in Ethereum also return the chain ID, but in hex. The `chain
 | `eth_call` | `txpool.submit_hex_transaction` 
 
 Note: hex transaction should be constructed from signer and transaction parameters, check this in [starcoin.js](https://github.com/starcoinorg/starcoin.js).
+
+## Get gas price
+
+| Ethereum | Starcoin |
+| --- | --- |
+| `eth_gasPrice` | `txpool.gas_price` 
+
+
+## Starcoin new APIs
+
+- `chain.get_blocks_by_number
+
+## Ethereum APIs not implemented in Starcoin yet
+
+- `eth_estimateGas`
