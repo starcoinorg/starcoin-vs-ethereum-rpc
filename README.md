@@ -49,9 +49,9 @@ Note: hex transaction should be constructed from signer and transaction paramete
 | `eth_gasPrice` | `txpool.gas_price` 
 
 
-## Starcoin new APIs
+## New Starcoin APIs not implemented in Ethereum
 
-- `chain.get_blocks_by_number
+- `chain.get_blocks_by_number`
 
 ## Ethereum APIs not implemented in Starcoin yet
 
