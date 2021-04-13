@@ -98,13 +98,19 @@ Note: hex transaction should be constructed from signer and transaction paramete
 | --- | --- |
 | `eth_gasPrice` | `txpool.gas_price` |
 
-## Get peer count 
+## Get peer count
 
 | Ethereum | Starcoin |
 | --- | --- |
 | `net_peerCount` | `network_manager.known_peers` -> `result.length` |
 
 Notes: `node.peers` in Starcoin will also returns a big array containing all peers' information.
+
+## Get syncing status
+
+| Ethereum | Starcoin |
+| --- | --- |
+| `eth_syncing` | `sync.status` |
 
 ---
 
