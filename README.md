@@ -74,6 +74,8 @@ Note: `state.get_account_state_set` returns a big array containing all informati
 | --- | --- |
 | `eth_getCode` | `contract.get_code` |
 
+Note: you could get a list of Starcoin modules and their module_id here: [https://github.com/starcoinorg/starcoin/tree/master/vm/stdlib/modules/doc](https://github.com/starcoinorg/starcoin/tree/master/vm/stdlib/modules/doc)
+
 ## Get chain ID
 
 | Ethereum | Starcoin |
@@ -95,6 +97,14 @@ Note: hex transaction should be constructed from signer and transaction paramete
 | Ethereum | Starcoin |
 | --- | --- |
 | `eth_gasPrice` | `txpool.gas_price` |
+
+## Get peer count 
+
+| Ethereum | Starcoin |
+| --- | --- |
+| `net_peerCount` | `node.peers` -> `result.length` |
+
+Notes: `node.peers` returns a big array containing all peers' information.
 
 ---
 
