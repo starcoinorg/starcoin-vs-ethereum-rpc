@@ -36,7 +36,7 @@ Starcoin vs. Ethereum - JSON RPC comparison
 
 | Ethereum | Starcoin |
 | --- | --- |
-| `eth_getBlockTransactionCountByHash` | `chain.get_block_txn_infos` -> result.length |
+| `eth_getBlockTransactionCountByHash` | `chain.get_block_txn_infos` -> `result.length` |
 
 Note: `chain.get_block_txn_infos` returns an array of all transactions on a block.
 
@@ -56,9 +56,9 @@ Note: `chain.get_block_txn_infos` returns an array of all transactions on a bloc
 
 | Ethereum | Starcoin |
 | --- | --- |
-| `eth_getTransactionCount` | `state.get_account_state_set` -> result[result.length - 1][1].U64 |
+| `eth_getTransactionCount` | `state.get_account_state_set` -> `result[result.length - 1][1].U64` |
 
-Note: `state.get_account_state_set` returns an big array of all information of an account, the number of transactions equals the `sequence_number` of the account.
+Note: `state.get_account_state_set` returns a big array containing all information of an account, the number of transactions equals the `sequence_number` of the account.
 
 ## Get chain ID
 
@@ -66,7 +66,7 @@ Note: `state.get_account_state_set` returns an big array of all information of a
 | --- | --- |
 | `net_version` | `chain.id` -> `result.id` |
 
-Note: `eth_chainId` in Ethereum also returns the chain ID, but in hex. The `chain.id` method in Starcoin will also return the chain name of Starcoin, for example, `barnard`, `proxima`, etc.
+Note: `eth_chainId` in Ethereum also returns the chain ID, but in hex format. The `chain.id` method in Starcoin will also return the chain name of Starcoin, for example, `barnard`, `proxima`, etc.
 
 ## Send transaction
 
@@ -74,7 +74,7 @@ Note: `eth_chainId` in Ethereum also returns the chain ID, but in hex. The `chai
 | --- | --- |
 | `eth_call` | `txpool.submit_hex_transaction` |
 
-Note: hex transaction should be constructed from signer and transaction parameters, check this in [starcoin.js](https://github.com/starcoinorg/starcoin.js/src/providers/jsonrpc-provider.ts).
+Note: hex transaction should be constructed from signer and transaction parameters, check the details out in [starcoin.js](https://github.com/starcoinorg/starcoin.js/blob/e844b2c1f871f686e8357f8131950f5122fc7fb1/src/providers/jsonrpc-provider.ts#L425).
 
 ## Get gas price
 
