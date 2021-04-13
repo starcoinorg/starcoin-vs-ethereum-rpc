@@ -52,6 +52,14 @@ Note: `chain.get_block_txn_infos` returns an array of all transactions on a bloc
 | --- | --- |
 | `eth_getTransactionByBlockHashAndIndex` | `chain.get_txn_info_by_block_and_index` |
 
+## Get transaction receipt
+
+| Ethereum | Starcoin |
+| --- | --- |
+| `eth_getTransactionReceipt` | `chain.get_transaction` |
+
+Note: `chain.get_transaction` returns information of an executed transaction. To get information of a pending transaction, please use `txpool.pending_txn`.
+
 ## Get transaction count of an account
 
 | Ethereum | Starcoin |
@@ -59,6 +67,12 @@ Note: `chain.get_block_txn_infos` returns an array of all transactions on a bloc
 | `eth_getTransactionCount` | `state.get_account_state_set` -> `result[result.length - 1][1].U64` |
 
 Note: `state.get_account_state_set` returns a big array containing all information of an account, the number of transactions equals the `sequence_number` of the account.
+
+## Get code for contract or module 
+
+| Ethereum | Starcoin |
+| --- | --- |
+| `eth_getCode` | `contract.get_code` |
 
 ## Get chain ID
 
