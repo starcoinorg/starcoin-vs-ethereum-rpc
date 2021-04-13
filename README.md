@@ -102,9 +102,9 @@ Note: hex transaction should be constructed from signer and transaction paramete
 
 | Ethereum | Starcoin |
 | --- | --- |
-| `net_peerCount` | `node.peers` -> `result.length` |
+| `net_peerCount` | `network_manager.known_peers` -> `result.length` |
 
-Notes: `node.peers` returns a big array containing all peers' information.
+Notes: `node.peers` in Starcoin will also returns a big array containing all peers' information.
 
 ---
 
