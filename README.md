@@ -1,6 +1,37 @@
 # starcoin-vs-ethereum-rpc
 Starcoin vs. Ethereum - JSON RPC comparison
 
+## Postman JSON RPC test
+
+We have provided Ethereum and Starcoin JSON RPC API collections in this repo. You could import them and test conveniently.
+
+#### Testing Ethereum
+
+1. Go to Postman Workspace page, then import `ethereum.postman_collection.json`
+2. Go to Postman Environments page, then import `ethereum.postman_environment.json`
+3. Go to [Infura.io](https://infura.io), choose an Ethereum network(for example, `kovan`) and get your `project_id`
+4. Modify the network name and `project_id` in Postman ethereum Environments with your own
+5. Choose an API, and click **Send** button
+
+#### Testing Starcoin
+
+1. Go to Postman Workspace page, then import `starcoin.postman_collection.json`
+2. Go to Postman Environments page, then import `starcoin.postman_environment.json`
+3. Run your local Starcoin network, or join online Starcoin network, like `barnard`, please refer to official Starcoin [documentation](https://developer.starcoin.org/en/setup/runnetwork/). The difference is that here we will open all Websocket and HTTP APIs for testing. For security, please do not tell your node URL to others.
+
+Start barnard node
+```
+./starcoin -n barnard --push-server-url http://miner-metrics-pushgw.starcoin.org:9191/ --push-interval 60 --miner-thread 4 --websocket-apis all --http-apis all
+```
+
+Start local dev node
+```
+./starcoin -n dev --miner-thread 2 --websocket-apis all --http-apis all
+```
+
+4. Modify the URL in Postman starcoin environments with your own
+5. Choose an API, and click **Send** button
+
 
 ## Get accounts
 
