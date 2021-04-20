@@ -81,6 +81,30 @@
 					"response": []
 				},
 				{
+					"name": "account.unlock",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"id\":200, \n \"jsonrpc\":\"2.0\", \n \"method\":\"account.unlock\", \n \"params\":[\"0x3f19d5422824f47e6c021978cee98f35\", \"your-password\"]\n}"
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "contract.get_resource",
 					"request": {
 						"method": "POST",
@@ -534,6 +558,30 @@
 				},
 				{
 					"name": "contract.get_code",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"id\":101, \n \"jsonrpc\":\"2.0\", \n \"method\":\"contract.get_code\", \n \"params\":[\"0x1::Account\"]\n}"
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "contract.call",
 					"request": {
 						"method": "POST",
 						"header": [

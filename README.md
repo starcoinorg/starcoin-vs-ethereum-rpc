@@ -19,6 +19,8 @@ We have provided Ethereum and Starcoin JSON RPC API collections in this repo. Yo
 2. Go to Postman Environments page, then import `starcoin.postman_environment.json`
 3. Run your local Starcoin network, or join online Starcoin network, like `barnard`, please refer to official Starcoin [documentation](https://developer.starcoin.org/en/setup/runnetwork/). The difference is that here we will open all Websocket and HTTP APIs for testing. For security, please do not tell your node URL to others.
 
+Note: if an API's response contains `result: null` instead of `error: {...}`, it's working as expected.
+
 Start barnard node
 ```
 ./starcoin -n barnard --push-server-url http://miner-metrics-pushgw.starcoin.org:9191/ --push-interval 60 --miner-thread 4 --websocket-apis all --http-apis all
