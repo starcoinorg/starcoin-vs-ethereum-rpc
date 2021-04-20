@@ -407,6 +407,37 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "eth_gasPrice",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"id\":100, \n \"jsonrpc\":\"2.0\", \n \"method\":\"eth_gasPrice\", \n \"params\":[]\n}"
+				},
+				"url": {
+					"raw": "https://{{network}}.infura.io/v3/{{project_id}}",
+					"protocol": "https",
+					"host": [
+						"{{network}}",
+						"infura",
+						"io"
+					],
+					"path": [
+						"v3",
+						"{{project_id}}"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
